@@ -145,12 +145,14 @@ const stack_type &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>nex
 <tr class="memitem:af3c36a223f0277e393f55a325e81742f"><td class="memItemLeft" align="right" valign="top"><a id="af3c36a223f0277e393f55a325e81742f" name="af3c36a223f0277e393f55a325e81742f"></a>
 const bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>isHead</b> (stack_type x) const</td></tr>
 <tr class="separator:af3c36a223f0277e393f55a325e81742f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab07028e5167a9e9f83b49df2bb20cba6"><td class="memItemLeft" align="right" valign="top">stack_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstack__pool.html#ab07028e5167a9e9f83b49df2bb20cba6">push</a> (const T &amp;val, stack_type head)</td></tr>
-<tr class="memdesc:ab07028e5167a9e9f83b49df2bb20cba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert in a specific stack a new value.  <a href="classstack__pool.html#ab07028e5167a9e9f83b49df2bb20cba6">More...</a><br /></td></tr>
-<tr class="separator:ab07028e5167a9e9f83b49df2bb20cba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aeadb825ff55809b1d035af2589502f"><td class="memItemLeft" align="right" valign="top">stack_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstack__pool.html#a3aeadb825ff55809b1d035af2589502f">push</a> (T &amp;&amp;val, stack_type head)</td></tr>
-<tr class="memdesc:a3aeadb825ff55809b1d035af2589502f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert in a specific stack a new value.  <a href="classstack__pool.html#a3aeadb825ff55809b1d035af2589502f">More...</a><br /></td></tr>
-<tr class="separator:a3aeadb825ff55809b1d035af2589502f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d25dd5c6781b067634b7022b71e6d7"><td class="memTemplParams" colspan="2">template&lt;typename X &gt; </td></tr>
+<tr class="memitem:aa6d25dd5c6781b067634b7022b71e6d7"><td class="memTemplItemLeft" align="right" valign="top">stack_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classstack__pool.html#aa6d25dd5c6781b067634b7022b71e6d7">push</a> (const X &amp;val, stack_type head)</td></tr>
+<tr class="memdesc:aa6d25dd5c6781b067634b7022b71e6d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert in a specific stack a new value.  <a href="classstack__pool.html#aa6d25dd5c6781b067634b7022b71e6d7">More...</a><br /></td></tr>
+<tr class="separator:aa6d25dd5c6781b067634b7022b71e6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a76622c117d14dc0869eaf016eb201"><td class="memTemplParams" colspan="2">template&lt;typename X &gt; </td></tr>
+<tr class="memitem:a85a76622c117d14dc0869eaf016eb201"><td class="memTemplItemLeft" align="right" valign="top">stack_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classstack__pool.html#a85a76622c117d14dc0869eaf016eb201">push</a> (X &amp;&amp;val, stack_type head)</td></tr>
+<tr class="memdesc:a85a76622c117d14dc0869eaf016eb201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert in a specific stack a new value.  <a href="classstack__pool.html#a85a76622c117d14dc0869eaf016eb201">More...</a><br /></td></tr>
+<tr class="separator:a85a76622c117d14dc0869eaf016eb201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a662a189732de30747e1a07674536194a"><td class="memItemLeft" align="right" valign="top">stack_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstack__pool.html#a662a189732de30747e1a07674536194a">pop</a> (stack_type x)</td></tr>
 <tr class="memdesc:a662a189732de30747e1a07674536194a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the first element of a given stack.  <a href="classstack__pool.html#a662a189732de30747e1a07674536194a">More...</a><br /></td></tr>
 <tr class="separator:a662a189732de30747e1a07674536194a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -637,13 +639,15 @@ template&lt;typename T , typename N  = std::size_t&gt; </div>
 
 </div>
 </div>
-<a id="ab07028e5167a9e9f83b49df2bb20cba6" name="ab07028e5167a9e9f83b49df2bb20cba6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab07028e5167a9e9f83b49df2bb20cba6">&#9670;&nbsp;</a></span>push() <span class="overload">[1/2]</span></h2>
+<a id="aa6d25dd5c6781b067634b7022b71e6d7" name="aa6d25dd5c6781b067634b7022b71e6d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6d25dd5c6781b067634b7022b71e6d7">&#9670;&nbsp;</a></span>push() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , typename N  = std::size_t&gt; </div>
+<div class="memtemplate">
+template&lt;typename X &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -651,7 +655,7 @@ template&lt;typename T , typename N  = std::size_t&gt; </div>
         <tr>
           <td class="memname">stack_type <a class="el" href="classstack__pool.html">stack_pool</a>&lt; T, N &gt;::push </td>
           <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramtype">const X &amp;&#160;</td>
           <td class="paramname"><em>val</em>, </td>
         </tr>
         <tr>
@@ -688,13 +692,15 @@ template&lt;typename T , typename N  = std::size_t&gt; </div>
 
 </div>
 </div>
-<a id="a3aeadb825ff55809b1d035af2589502f" name="a3aeadb825ff55809b1d035af2589502f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3aeadb825ff55809b1d035af2589502f">&#9670;&nbsp;</a></span>push() <span class="overload">[2/2]</span></h2>
+<a id="a85a76622c117d14dc0869eaf016eb201" name="a85a76622c117d14dc0869eaf016eb201"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85a76622c117d14dc0869eaf016eb201">&#9670;&nbsp;</a></span>push() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , typename N  = std::size_t&gt; </div>
+<div class="memtemplate">
+template&lt;typename X &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -702,7 +708,7 @@ template&lt;typename T , typename N  = std::size_t&gt; </div>
         <tr>
           <td class="memname">stack_type <a class="el" href="classstack__pool.html">stack_pool</a>&lt; T, N &gt;::push </td>
           <td>(</td>
-          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramtype">X &amp;&amp;&#160;</td>
           <td class="paramname"><em>val</em>, </td>
         </tr>
         <tr>
