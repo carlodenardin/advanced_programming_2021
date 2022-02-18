@@ -159,10 +159,10 @@ class stack_pool {
             public:
                 T value;
                 N next;
-                bool first;
+                bool isHead;
 
-                node_t (T value, N next, bool first): 
-                    value{value}, next{next}, first{first} {}
+                node_t (T value, N next, bool isHead): 
+                    value{value}, next{next}, isHead{isHead} {}
         };
 
         using stack_type = N;
@@ -217,12 +217,12 @@ class stack_pool {
                 value(free_nodes) = val;
                 free_nodes = next(free_nodes);
                 next(t) = head;
-                first(head) = false;
-                first(t) = true;
+                isHead(head) = false;
+                isHead(t) = true;
                 return t;
             } else {
                 pool.push_back(node_t(val, head, true));
-                first(head) = false;
+                isHead(head) = false;
                 return static_cast<stack_type>(pool.size());
             }   
         }
@@ -238,7 +238,7 @@ class stack_pool {
         /**
          * @brief Construct a new stack pool object which capacity is n.
          * 
-         * Exception: (inherited from std::vector::reserve method)
+         * Exception: (inherited from **std::vector::reserve** method)
          * - std::length_error if n > max_size().
          * - std::bad_alloc by Allocator::allocate().
          *
@@ -363,7 +363,7 @@ class stack_pool {
         /**
          * @brief Return true if the node is the head of the stack.
          * 
-         * Exception: (inherited from node method)
+         * Exception: (inherited from **node** method)
          * - RangeCheckingException if an index not in range of the pool is
          * is given. This avoid undefined behaviour and segmentation fault.
          * 
@@ -371,13 +371,13 @@ class stack_pool {
          * @return true if the node is the head.
          * @return false if the node is not the head.
          */
-        bool& first(stack_type x) { return node(x).first; }
-        const bool& first(stack_type x) const { return node(x).first; }
+        bool& isHead(stack_type x) { return node(x).isHead; }
+        const bool& isHead(stack_type x) const { return node(x).isHead; }
 
         /**
          * @brief Insert in a specific stack a new value.
          * 
-         * Exception: (inherited from _push method)
+         * Exception: (inherited from **_push** method)
          * - NotEqualTypeException if a different type from the type_value is
          * passed.
          *
@@ -392,7 +392,7 @@ class stack_pool {
         /**
          * @brief Insert in a specific stack a new value.
          * 
-         * Exception:
+         * Exception: (inherited from **_push** method)
          * - NotEqualTypeException if a different type from the type_value is
          * passed.
          *
@@ -415,7 +415,7 @@ class stack_pool {
          * @return stack_type New head of the stack which will be equal to end().
          */
         stack_type pop (stack_type x) {
-            if (!first(x)) {
+            if (!isHead(x)) {
                 throw NotStackHeadException(
                     "You tried to pop a stack by passing a no-head."
                 );
@@ -429,8 +429,8 @@ class stack_pool {
             next(x) = free_nodes;
             free_nodes = x;
             value(x) = -1; // Debug info (not neccessary)
-            first(t) = true;
-            first(x) = false;
+            isHead(t) = true;
+            isHead(x) = false;
             return t;
         }
 

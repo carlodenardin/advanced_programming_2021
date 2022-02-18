@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['length_0',['length',['../classstack__pool.html#add4147f3f3591aca9162d4917509cdc2',1,'stack_pool']]]
+  ['ishead_0',['isHead',['../classstack__pool.html#a2b46013503cfdc53e2b809fd69f979aa',1,'stack_pool']]]
 ];

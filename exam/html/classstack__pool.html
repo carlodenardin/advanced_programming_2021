@@ -139,12 +139,12 @@ const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> (s
 <tr class="memitem:a88eb6d63010db71e2e09a2619729e821"><td class="memItemLeft" align="right" valign="top"><a id="a88eb6d63010db71e2e09a2619729e821" name="a88eb6d63010db71e2e09a2619729e821"></a>
 const stack_type &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>next</b> (stack_type x) const</td></tr>
 <tr class="separator:a88eb6d63010db71e2e09a2619729e821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc9be9a76fb78c3668d294630c46ce67"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstack__pool.html#adc9be9a76fb78c3668d294630c46ce67">first</a> (stack_type x)</td></tr>
-<tr class="memdesc:adc9be9a76fb78c3668d294630c46ce67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the node is the head of the stack.  <a href="classstack__pool.html#adc9be9a76fb78c3668d294630c46ce67">More...</a><br /></td></tr>
-<tr class="separator:adc9be9a76fb78c3668d294630c46ce67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1caea2478371a54f59f8be6f0db6be23"><td class="memItemLeft" align="right" valign="top"><a id="a1caea2478371a54f59f8be6f0db6be23" name="a1caea2478371a54f59f8be6f0db6be23"></a>
-const bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>first</b> (stack_type x) const</td></tr>
-<tr class="separator:a1caea2478371a54f59f8be6f0db6be23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b46013503cfdc53e2b809fd69f979aa"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstack__pool.html#a2b46013503cfdc53e2b809fd69f979aa">isHead</a> (stack_type x)</td></tr>
+<tr class="memdesc:a2b46013503cfdc53e2b809fd69f979aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the node is the head of the stack.  <a href="classstack__pool.html#a2b46013503cfdc53e2b809fd69f979aa">More...</a><br /></td></tr>
+<tr class="separator:a2b46013503cfdc53e2b809fd69f979aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3c36a223f0277e393f55a325e81742f"><td class="memItemLeft" align="right" valign="top"><a id="af3c36a223f0277e393f55a325e81742f" name="af3c36a223f0277e393f55a325e81742f"></a>
+const bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>isHead</b> (stack_type x) const</td></tr>
+<tr class="separator:af3c36a223f0277e393f55a325e81742f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab07028e5167a9e9f83b49df2bb20cba6"><td class="memItemLeft" align="right" valign="top">stack_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstack__pool.html#ab07028e5167a9e9f83b49df2bb20cba6">push</a> (const T &amp;val, stack_type head)</td></tr>
 <tr class="memdesc:ab07028e5167a9e9f83b49df2bb20cba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert in a specific stack a new value.  <a href="classstack__pool.html#ab07028e5167a9e9f83b49df2bb20cba6">More...</a><br /></td></tr>
 <tr class="separator:ab07028e5167a9e9f83b49df2bb20cba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,7 +206,7 @@ template&lt;typename T , typename N  = std::size_t&gt; </div>
 </div><div class="memdoc">
 
 <p>Construct a new stack pool object which capacity is n. </p>
-<p >Exception: (inherited from std::vector::reserve method)</p><ul>
+<p >Exception: (inherited from <b>std::vector::reserve</b> method)</p><ul>
 <li>std::length_error if n &gt; max_size().</li>
 <li>std::bad_alloc by Allocator::allocate().</li>
 </ul>
@@ -327,48 +327,6 @@ template&lt;typename T , typename N  = std::size_t&gt; </div>
 
 </div>
 </div>
-<a id="adc9be9a76fb78c3668d294630c46ce67" name="adc9be9a76fb78c3668d294630c46ce67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc9be9a76fb78c3668d294630c46ce67">&#9670;&nbsp;</a></span>first()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename N  = std::size_t&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool &amp; <a class="el" href="classstack__pool.html">stack_pool</a>&lt; T, N &gt;::first </td>
-          <td>(</td>
-          <td class="paramtype">stack_type&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return true if the node is the head of the stack. </p>
-<p >Exception: (inherited from node method)</p><ul>
-<li><a class="el" href="struct_range_checking_exception.html" title="RangeCheckingException handle the event in which a user tries to access a portion of memory that does...">RangeCheckingException</a> if an index not in range of the pool is is given. This avoid undefined behaviour and segmentation fault.</li>
-</ul>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>Index of the node (usually it will the head of the stack). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the node is the head. </dd>
-<dd>
-false if the node is not the head. </dd></dl>
-
-</div>
-</div>
 <a id="a090ab2cc80e9c1e82c655b64da7d4c79" name="a090ab2cc80e9c1e82c655b64da7d4c79"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a090ab2cc80e9c1e82c655b64da7d4c79">&#9670;&nbsp;</a></span>free_stack()</h2>
 
@@ -407,6 +365,48 @@ template&lt;typename T , typename N  = std::size_t&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>stack_type New head of the stack which will be equal to end(). </dd></dl>
+
+</div>
+</div>
+<a id="a2b46013503cfdc53e2b809fd69f979aa" name="a2b46013503cfdc53e2b809fd69f979aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b46013503cfdc53e2b809fd69f979aa">&#9670;&nbsp;</a></span>isHead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename N  = std::size_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; <a class="el" href="classstack__pool.html">stack_pool</a>&lt; T, N &gt;::isHead </td>
+          <td>(</td>
+          <td class="paramtype">stack_type&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return true if the node is the head of the stack. </p>
+<p >Exception: (inherited from <b>node</b> method)</p><ul>
+<li><a class="el" href="struct_range_checking_exception.html" title="RangeCheckingException handle the event in which a user tries to access a portion of memory that does...">RangeCheckingException</a> if an index not in range of the pool is is given. This avoid undefined behaviour and segmentation fault.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Index of the node (usually it will the head of the stack). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the node is the head. </dd>
+<dd>
+false if the node is not the head. </dd></dl>
 
 </div>
 </div>
@@ -674,7 +674,7 @@ template&lt;typename T , typename N  = std::size_t&gt; </div>
 </div><div class="memdoc">
 
 <p>Insert in a specific stack a new value. </p>
-<p >Exception: (inherited from _push method)</p><ul>
+<p >Exception: (inherited from **_push** method)</p><ul>
 <li><a class="el" href="struct_not_equal_type_exception.html" title="NotEqualTypeException handle the event in which a user tries to insert a different type value in a st...">NotEqualTypeException</a> if a different type from the type_value is passed.</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -725,7 +725,7 @@ template&lt;typename T , typename N  = std::size_t&gt; </div>
 </div><div class="memdoc">
 
 <p>Insert in a specific stack a new value. </p>
-<p >Exception:</p><ul>
+<p >Exception: (inherited from **_push** method)</p><ul>
 <li><a class="el" href="struct_not_equal_type_exception.html" title="NotEqualTypeException handle the event in which a user tries to insert a different type value in a st...">NotEqualTypeException</a> if a different type from the type_value is passed.</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
