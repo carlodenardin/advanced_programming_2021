@@ -63,8 +63,8 @@ struct NotEqualTypeException : public std::exception {
  * 
  */
  struct RangeCheckingException : public std::exception {
-     std::string message;
-     RangeCheckingException(std::string message) : message {message} {}
+    std::string message;
+    RangeCheckingException(std::string message) : message {message} {}
  };
 
 /**
@@ -160,9 +160,9 @@ class stack_pool {
                 T value;
                 N next;
                 bool isHead;
-
-                node_t (T value, N next, bool isHead): 
-                    value{value}, next{next}, isHead{isHead} {}
+                
+                template <typename X>
+                node_t(X &&x, N n, bool isHead) : value{std::forward<X>(x)}, next{n}, isHead{isHead} {}
         };
 
         using stack_type = N;
@@ -221,7 +221,7 @@ class stack_pool {
                 isHead(t) = true;
                 return t;
             } else {
-                pool.push_back(node_t(val, head, true));
+                pool.emplace_back(std::forward<X>(val), head, true);
                 isHead(head) = false;
                 return static_cast<stack_type>(pool.size());
             }   
