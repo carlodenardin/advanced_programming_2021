@@ -25,6 +25,7 @@
 #include <vector>
 #include <exception>
 #include <type_traits>
+#include <utility>
 
 /**
  * @brief EmptyStackException handle the event in which a user tries to pop
@@ -162,8 +163,9 @@ class stack_pool {
                 N next;
                 bool isHead;
                 
-                node_t (T value, N next, bool isHead): 
-                    value{value}, next{next}, isHead{isHead} {}
+                template <typename X>
+                node_t(X&& value, N n, bool isHead) : 
+                    value{std::forward<X>(value)}, next{n}, isHead{isHead} {}
         };
 
         using stack_type = N;
@@ -221,11 +223,11 @@ class stack_pool {
                 isHead(head) = false;
                 isHead(t) = true;
                 return t;
-            } else {
-                pool.push_back(std::move(node_t(val, head, true)));
-                isHead(head) = false;
-                return static_cast<stack_type>(pool.size());
-            }   
+            }
+
+            pool.emplace_back(std::forward<X>(val), head, true);
+            isHead(head) = false;
+            return static_cast<stack_type>(pool.size()); 
         }
     
     public:
