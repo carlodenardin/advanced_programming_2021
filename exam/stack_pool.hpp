@@ -162,10 +162,10 @@ class stack_pool {
                 T value;
                 N next;
                 bool isHead;
-                
+
                 template <typename X>
-                node_t(X&& value, N n, bool isHead) : 
-                    value{std::forward<X>(value)}, next{n}, isHead{isHead} {}
+                node_t(X&& value, N next, bool isHead) : 
+                    value{std::forward<X>(value)}, next{next}, isHead{isHead} {}
         };
 
         using stack_type = N;
