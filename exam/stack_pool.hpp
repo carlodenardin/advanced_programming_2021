@@ -198,6 +198,9 @@ class stack_pool {
         /**
          * @brief Insert a new value on the top of a specific stack. The new
          * value will be the new head of the stack.
+         *
+         * Universal References:
+         * https://eli.thegreenplace.net/2014/perfect-forwarding-and-universal-references-in-c
          * 
          * Exception:
          * - NotEqualTypeException if a different type from the type_value is
