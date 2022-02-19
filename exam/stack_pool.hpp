@@ -227,7 +227,8 @@ class stack_pool {
                 isHead(t) = true;
                 return t;
             }
-
+            
+            // pool.push_back(node_t(val, head, true));
             pool.emplace_back(std::forward<X>(val), head, true);
             isHead(head) = false;
             return static_cast<stack_type>(pool.size()); 
